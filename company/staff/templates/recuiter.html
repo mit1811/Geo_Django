@@ -1,0 +1,5 @@
+
+<h1>Recuiters List</h1>
+{% for name in recuiter_name %}
+<a href='{{name.get_absolute_url}}'>{{name.recuitername}}<br><br>
+{% endfor %}

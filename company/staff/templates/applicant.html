@@ -1,0 +1,4 @@
+<h1>Applicants List</h1>
+{% for name in applicant_name %}
+<a href="{% url 'staff:upload' %}">{{name.applicantname}}<br><br></a>
+{% endfor %}

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>MAKE PDF</title>
+        <style type="text/css">
+            @page {
+                size: {{ pagesize }};
+                margin: 1cm;
+                @frame footer {
+                    -pdf-frame-content: footerContent;
+                    bottom: 0cm;
+                    margin-left: 9cm;
+                    margin-right: 9cm;
+                    height: 1cm;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+               <h1>first name: {{firstname}}<br></h1>
+               <h1>last name: {{lastname}}<br></h1>
+               <h1>project description: {{projectdescription}}<br></h1>
+               <h1>university name: {{universityname}}<br></h1>
+               <h1>languages know: {{languagesknow}}<br></h1>
+               <h1>Email ID: {{email}}<br></h1>
+               <h1>contact number: {{contactnumber}}<br></h1>
+
+        </div>
+        <div id="footerContent">
+            {%block page_foot%}
+                Page <pdf:pagenumber>
+            {%endblock%}
+        </div>
+    </body>
+</html>
