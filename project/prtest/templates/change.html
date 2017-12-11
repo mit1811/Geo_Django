@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="2">
+<tr>
+<td>students name</td>
+</tr>
+{% for item in students_name %} 
+<tr>
+<td>{{item.students}}</td>
+</tr>
+{% endfor %}
+<table border="2" style="margin-top: 20px;">
+<tr>
+<td>teachers name</td>
+</tr>
+{% for item in teachers_name %}
+<tr>
+<td>{{item.teachers}}</td>
+</tr>
+{% endfor %}
+</table>
+</table>
+</body>
+</html>

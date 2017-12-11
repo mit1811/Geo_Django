@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1>Course name</h1>
+<table border="2">
+<tr>
+<td>course name</td>
+</tr>
+{% for name in details %}
+<tr>
+<td><a href='{{name.get_absolute_url}}'>{{name.courses}}</td>
+<!-- <td>{% for teacher_by_course in name.teacher_by_course.all %}{{teacher_by_course}}<br>{% endfor %}</td></tr> -->
+{% endfor %}
+</table>
+</body>
+</html>
